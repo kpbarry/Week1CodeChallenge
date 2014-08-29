@@ -108,7 +108,7 @@ namespace Week_1_Code_Challenge
             //Consonants = anything that's not a vowel or special char
             consonants = characters - special - vowels;
 
-            Console.WriteLine("Characters: " + characters + "\n Consonants: " + consonants + "\n Special: " + special + "\n Vowels: " 
+            Console.WriteLine("Characters: " + characters + "\n Consonants: " + consonants + "\n Special: " + special + "\n Vowels: "
                 + vowels + "\n Words: " + words);
         }
 
@@ -133,16 +133,20 @@ namespace Week_1_Code_Challenge
         static void DashInsert(int number)
         {
             string f = number.ToString();
+            
             //Will stop once it gets to the end of the string
             for (int i = 0; i < f.Length; i++)
             {
-                Convert.ToInt32(f[i]);
-                Console.Write(f[i]);
+                int num1 = int.Parse(f);
+                int num2 = int.Parse(f + 1);
+                
                 //Checks for 2 consecutive odd #s
-                if ((f[i] % 2 != 0) && (f[i + 1] % 2 != 0))
+                if ((num1 % 2 != 0) && (num2 % 2 != 0))
                 {
-                    Console.Write("-");
+                    
+                    Console.Write(f[i]);
                 }
+
             }
         }
     }
