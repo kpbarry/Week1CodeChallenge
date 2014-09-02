@@ -138,7 +138,7 @@ namespace Week_1_Code_Challenge
             for (int i = 0; i < f.Length; i++)
             {
                 //Checks for 2 consecutive odd #s
-                if ((f[i] % 2 != 0) && (f[i+1] % 2 != 0))
+                if ((f[i-1] % 2 != 0) && (f[i] % 2 != 0))
                 {
                     Console.Write("-");
                 }
