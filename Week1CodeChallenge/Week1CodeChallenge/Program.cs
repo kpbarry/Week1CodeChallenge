@@ -132,18 +132,26 @@ namespace Week_1_Code_Challenge
 
         static void DashInsert(int number)
         {
+            //Convert number to string
             string f = number.ToString();
-            
+            //String to build on
+            string g = string.Empty;
+
             //Will stop once it gets to the end of the string
-            for (int i = 0; i < f.Length; i++)
+            foreach (char c in f)
             {
                 //Checks for 2 consecutive odd #s
-                if ((f[i-1] % 2 != 0) && (f[i] % 2 != 0))
+                if (Convert.ToInt32(c) % 2 != 0 && Convert.ToInt32(g[g.Length - 1]) % 2 != 0)
                 {
-                    Console.Write("-");
+                    g = g + "-" + c;
                 }
-                Console.Write(f[i]);
+                else
+                {
+                    g = g + c;
+                }
             }
+            //Print out
+            Console.Write(g);
         }
     }
 }
