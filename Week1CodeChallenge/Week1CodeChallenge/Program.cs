@@ -137,16 +137,12 @@ namespace Week_1_Code_Challenge
             //Will stop once it gets to the end of the string
             for (int i = 0; i < f.Length; i++)
             {
-                int num1 = int.Parse(f);
-                int num2 = int.Parse(f + 1);
-                
                 //Checks for 2 consecutive odd #s
-                if ((num1 % 2 != 0) && (num2 % 2 != 0))
+                if ((f[i] % 2 != 0) && (f[i+1] % 2 != 0))
                 {
-                    
-                    Console.Write(f[i]);
+                    Console.Write("-");
                 }
-
+                Console.Write(f[i]);
             }
         }
     }
